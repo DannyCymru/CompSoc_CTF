@@ -4,7 +4,7 @@
     
     for ($i=1; $i <= $data ; $i++) { 
     	
-    	echo '<div class="member><label for="text"> Team Member '; 
+    	echo '<div><label for="text"> Team Member '; 
     	echo $i; 
     	echo': </label>
                   <label for="text"> First Name: </label>
