@@ -71,10 +71,10 @@
             <form action ="php/sign_up.php">
               <div class="form-group">
                 <div class="form-inline text-center">
-                  <label for="text">Team Name:</label>
+                  <label for="text" class="mr-sm-2">Team Name:</label>
                   <input type="text" placeholder="Crash 'N' Burn" id="team_name">
                   <br>
-                  <select class="form-control" id="team_member_select" onchange="OnSelectChange();">
+                  <select class="form-control mr-sm-2" id="team_member_select" onchange="OnSelectChange();">
                     <option selected disabled hidden>0</option>
                     <option>1</option>
                     <option>2</option>
@@ -83,7 +83,7 @@
                 </select>
               </div>
                 <div id="team_sign_up">
-                </div>    
+                </div>
               </div>
             </form>
           </div>
