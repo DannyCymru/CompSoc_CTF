@@ -11,6 +11,5 @@ echo	'<!-- Navigation -->
             	<li> <a class="nav-link" href="https://www.erebus.systems/CompSoc_CTF/sign_up.php">Sign Up</a>
         </ul>
       </div>
-    </div>
   </nav>'
 ?>

@@ -13,6 +13,26 @@
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
+  <script type="text/javascript" >
+    function OnSelectChange(){
+      clear();
+
+      var selected_el=document.getElementById("team_member_select");
+      var element=selected_el.options[selected_el.selectedIndex].value;
+      $.ajax({ url: 'php/team_members.php',
+               data: {"myData": element},
+               type: 'POST',
+               success: function(data){
+                      $(data).appendTo(".team_sign_up");  
+               }
+      })
+
+   function clear(){
+    $("div").remove(".member");
+    }
+    }
+  </script>
+
 </head>
 
 <body>
@@ -41,7 +61,7 @@
         </form>
     </div>
   </div>
-  
+  </div>
   <!-- Sign Up -->
   <div class="container">
     <div class="row">
@@ -51,21 +71,26 @@
             <form action ="php/sign_up.php">
               <div class="form-group">
                 <label for="text">Team Name:</label>
-                <input type="text" class="form-control" placeholder="Crash 'N' Burn" id="team_name">
-              </div>
+                <input type="text" placeholder="Crash 'N' Burn" id="team_name">
 
-              <div class="form-group">
-                <label for="text" class="mr-sm-2"> Team Member 1: </label>
-                <label for="text"> First Name: </label>
-                <input type="text" class="form-control mb-2 mr-sm-2" placeholder="Danny" id="first_name">
-                <label for="text"> Second Name:</label> 
-                <input type="text" class="form-control" placeholder="Roberts" id="second_name">
-                <label for="text"> GRE Email:</label> 
-                <input type="text" class="form-control" placeholder="Roberts" id="second_name">    </div>
+                <br>
+                <select class="form-control" id="team_member_select" onchange="OnSelectChange();">
+                  <option selected disabled hidden>0</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                </select>
+                <div class="team_sign_up">
+                </div>    
+              </div>
+            </form>
+          </div>
+        </div>
   </div>
 
   <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.slim.min.js"></script>
+  <script src="vendor/jquery/jquery.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 </body>

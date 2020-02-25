@@ -34,8 +34,10 @@ body{
 	padding: 5%;
 }
 
-
 .list-group-item{
 	background-color: #ecf0f1;
+}
+.sign_up{
+	display: inline !important; 
 }
 
