@@ -18,15 +18,19 @@
 <body>
 
    <?php
-    include "php/nav.php";
+    include "php/nav_qnd.php";
   ?>
 
   <!-- Page Content -->
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
-        <h1 class="mt-5">Welcome to the CompSoc Capture The Flag Competition!</h1>
+        <h1 class="mt-5">Welcome to the Capture The Flag Competition!</h1>
         <p class="lead">Thank you for coming and performing in our first Capture The Flag event! We are really proud of this project and we hope that everyone has a good time. As we wait for people to arrive please talk amongst yourselves, if you don't know your team mates exchange names and come up with a good team name! Read the rules before you sign up. Good luck, have fun.</p>
+
+        <br>
+
+        <h1 class="lead"> IP Address to attack: 5.39.81.69 </h1>
       </div>
     </div>
   </div>
