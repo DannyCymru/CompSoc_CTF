@@ -13,7 +13,8 @@
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-  <script type="text/javascript" >
+  <script type="text/javascript">
+    //Function to clear current form
     function clear(){
     $("#team_sign_up").empty();
     }
@@ -23,6 +24,8 @@
 
       var selected_el=document.getElementById("team_member_select");
       var element=selected_el.options[selected_el.selectedIndex].value;
+
+      //ajax request to create more form fields depending on user input
       $.ajax({ url: 'php/team_members.php',
                data: {"myData": element},
                type: 'POST',
